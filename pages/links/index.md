@@ -2,6 +2,7 @@
 layout: page
 title: "Links"
 description: "Page containing the links I like"
+group: navigation
 ---
 {% include JB/setup %}
 
