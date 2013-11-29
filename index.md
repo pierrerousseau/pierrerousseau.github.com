@@ -8,7 +8,7 @@ group: navigation
 
 I'm a [software engineer].
 
-I like to [code] and to try new tools. 
+I like to [code] and to test new tools. 
 
 I try to be slow and agile.
 
