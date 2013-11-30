@@ -1,0 +1,28 @@
+---
+layout: page
+title: About
+description: "Who am I?"
+group: navigation
+---
+{% include JB/setup %}
+
+<p> 
+I'm a 
+<a href="http://fr.linkedin.com/in/rousseaupierre/en">software engineer</a>.
+</p>
+
+<p> I like to write code and to test new tools. </p>
+
+<p> I try to be slow and agile. </p>
+
+<div class="related">
+  <h3>Last Posts</h3>
+  <ul class="related-posts">
+    {% for post in site.posts limit:5 %}
+      <li>
+          <a href="{{ post.url }}">
+              <small>{{ post.title }}</small>
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
