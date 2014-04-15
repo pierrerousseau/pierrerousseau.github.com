@@ -10,7 +10,7 @@ title: "Programming Style & Your Brain"
 
 ##### Abstract (video about)
 
-In this keynote talk from YUIConf 2011, Yahoo! JavaScript architect Douglas Crockford drops some science to explain why code style is important in programming -- particularly in JavaScript -- and how tools like JSLint can help.
+In this keynote talk from YUIConf 2011, Yahoo! JavaScript architect Douglas Crockford drops some science to explain why code style is important in programming -- particularly in JavaScript -- and how tools like JSLint can help [...][Programming Style & Your Brain]
 
 
 ##### Personnal opinion

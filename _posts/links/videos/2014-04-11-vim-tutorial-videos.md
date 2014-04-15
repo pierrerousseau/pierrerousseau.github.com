@@ -10,7 +10,7 @@ title: "Vim Tutorial Videos"
 
 ##### Abstract (webpage introduction)
 
-In these videos we cover the basics. If you're just getting started or think you may be missing some of the basic ideas behind Vim, these videos are for you. They're hosted at Vimeo but you can also watch them here if you wish. The quality may be a bit better over at Vimeo, though.
+In these videos we cover the basics. If you're just getting started or think you may be missing some of the basic ideas behind Vim, these videos are for you. They're hosted at Vimeo but you can also watch them here if you wish. The quality may be a bit better over at Vimeo, though [...][Vim Tutorial Videos]
 
 
 ##### Personnal opinion
