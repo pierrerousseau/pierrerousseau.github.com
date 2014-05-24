@@ -17,7 +17,7 @@ I wanted to go about extracting the soul of these techniques into a simple, re-u
 
 ##### Personnal opinion
 
-In this article John Resig gives and comments a source code implementing inheritance in JavaScript. It would have been interesting to have his view on other inheritance technics and to know why he has chosen to present this one. However the code is simple and well explained. In addition to the main subject, I think the implementation of *super* is one of the most brilliant example of closure I ever seen : it's simple and powerful, understand it, and you'll understand closures.
+In this article [John Resig] gives and comments a source code implementing inheritance in JavaScript. It would have been interesting to have his view on other inheritance technics and to know why he has chosen to present this one. However the code is simple and well explained. In addition to the main subject, I think the implementation of *super* is one of the most brilliant example of closure I ever seen : it's simple and powerful, understand it, and you'll understand closures.
 
 
 [Simple JavaScript Inheritance]: http://ejohn.org/blog/simple-javascript-inheritance/
