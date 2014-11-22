@@ -116,7 +116,7 @@ Erm. I do not remember where I found the solution but here is how to install yao
     $ cd ..
 
 
-Now we can install Mopidy easily, and launch it to be sure it is working.
+Now we can install *Mopidy* easily, and launch it to be sure it is working.
 
     $ yaourt -S mopidy
     $ yaourt -S mopidy-musicbox
@@ -124,9 +124,9 @@ Now we can install Mopidy easily, and launch it to be sure it is working.
     $ mopidy
     Ctrl-C
 
-*Ctrl-C* will shut down the Mopidy server and *mopidy-musicbox* is one of the many web frontend available for Mopidy (the one from Pi MusicBox). yaourt will ask for *root* password, according to the documentation, it is only to launch *pacman*.
+*Ctrl-C* will shut down the *Mopidy* server and *mopidy-musicbox* is one of the many web frontend available for *Mopidy* (the one from Pi MusicBox). yaourt will ask for *root* password, according to the documentation, it is only to launch *pacman*.
 
-Then we have to set up directories and set up the Mopidy configuration. For a start we do it as simple as possible.
+Then we have to make directories and set up the *Mopidy* configuration. For a start we do it as simple as possible.
 
     $ cd
     $ mkdir media
@@ -147,7 +147,8 @@ I paste here the change i made in the configuration file :
     [http]
     hostname = 0.0.0.0
 
-    Finally we will set it up as a service for *systemd* with the [help of dz0ny].
+
+Then we will set it up as a service for *systemd* with the [help of dz0ny].
 
     $ su
     $ vi /etc/systemd/system/mopidy.service
@@ -182,7 +183,7 @@ Now we can connect on our server with our favourite browser. For me it was : htt
 
 Ok, a few other things I've done and that may help you also :
 
-Following the article on linuxfr i bought a USB [DAC] ([this one from HiFimeDIY] based on one comment of this article).
+* Following the article on linuxfr i bought a USB [DAC] ([this one from HiFimeDIY] based on one comment of this article).
 
 To make it work we have to comment the Raspberry Pi audio module.
 
@@ -200,7 +201,16 @@ And add this (the file was created by the previous command) :
 
     options snd-usb-audio index=0
 
-And I also bought a box for the Raspberry Pi, the B+ Ninja Pibow.
+
+* I also bought a box for the Raspberry Pi, the B+ Ninja Pibow. Because it looks cool (see image at top of this article).
+
+
+* To change the default radio stations list of the MusciBox webserver you have to manually edit a file, restart the *Mopidy* server, remove the cookies for the site and reload the page.
+
+Here is the file to change (there is probably a better way) :
+
+    $ vi /usr/lib/python2.7/site-packages/mopidy_musicbox_webclient/static/js/radiostations.js
+
 
 That's all for now (even if I will probably correct or update this post later :)
 
