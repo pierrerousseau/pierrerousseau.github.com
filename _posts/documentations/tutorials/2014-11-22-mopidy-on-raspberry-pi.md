@@ -221,7 +221,7 @@ That's all for now (even if I will probably correct or update this post later :)
 [DAC]: http://en.wikipedia.org/wiki/Digital-to-analog_converter
 [help of dz0ny]: https://github.com/mopidy/mopidy/issues/266#issuecomment-19273353
 [Mopidy]: https://www.mopidy.com/
-[MPD]: http://en.wikipedia.org/wiki/MPD
+[MPD]: http://en.wikipedia.org/wiki/Music_Player_Daemon
 [Pi MusicBox]: http://www.pimusicbox.com/
 [Raspberry Pi]: http://www.raspberrypi.org/
 [Raspberry Pi model B+]: http://www.raspberrypi.org/products/model-b-plus/
