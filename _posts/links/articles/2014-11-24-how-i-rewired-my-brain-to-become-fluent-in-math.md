@@ -24,3 +24,4 @@ I am just annoyed by the subtitle of this article "Sorry, education reformers, i
 
 
 [How I Rewired My Brain to Become Fluent in Math]: http://nautil.us/issue/17/big-bangs/how-i-rewired-my-brain-to-become-fluent-in-math-rd
+[Barbara Oakley]: http://en.wikipedia.org/wiki/Barbara_Oakley
