@@ -3,6 +3,7 @@
         {{ page.title }} 
         {% if page.tagline %}<small>{{ page.tagline }}</small>{% endif %}
     </h2>
+    <h4> {{ page.date | date: "%d/%m/%Y" }} </h4>
 </div>
 <hr />
 {% unless page.categories == empty %}
@@ -27,6 +28,9 @@
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
+        {% for category in post.categories limit:1 %}
+        <small> [ {{ category }} ]</small>
+        {% endfor %}
           <a href="{{ post.url }}">
               <small>{{ post.title }}</small>
           </a>

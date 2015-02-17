@@ -19,6 +19,9 @@ I'm a
     <ul class="related-posts">
         {% for post in site.posts limit:5 %}
         <li>
+        {% for category in post.categories limit:1 %}
+        <small> [ {{ category }} ]</small>
+        {% endfor %}
         <a href="{{ post.url }}"> <small>{{ post.title }}</small> </a>
         </li>
         {% endfor %}
