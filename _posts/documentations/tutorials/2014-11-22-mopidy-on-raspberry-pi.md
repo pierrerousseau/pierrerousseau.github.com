@@ -15,7 +15,9 @@ I describe here how I did install [Mopidy] under [Arch Linux] on a [Raspberry Pi
 * Speakers that you can plug on a 3.5mm jack
 * A microSD card (32Gb)
 
-<img src="/assets/images/raspberry_pi.jpg" width="640" height="480" alt="My Raspberry Pi" />
+<div class="img">
+    <img src="/assets/images/raspberry_pi.jpg" width="640" height="480" alt="My Raspberry Pi" />
+</div>
 
 
 ##### Why ?

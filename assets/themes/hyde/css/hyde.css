@@ -24,6 +24,11 @@ Learn more at http://andhyde.com or https://github.com/mdo/hyde.
 /* Body resets
 -------------------------------------------------- */
 
+@font-face{ 
+    font-family: "Open Sans"; 
+    src: url("/assets/fonts/OpenSans-Regular-webfont.ttf"); 
+}
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -51,19 +56,25 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 40px;
+  font-size: 56px;
 }
 h2 {
   margin-top: 20px;
-  font-size: 32px;
+  font-size: 48px;
 }
 h3 {
-  margin-top: 24px;
-  font-size: 24px;
+  margin-top: 20px;
+  font-size: 40px;
 }
-h4, h5, h6 {
+h4 {
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 32px;
+}
+
+h5, h6 {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 p {
@@ -173,7 +184,7 @@ img {
 
 a {
   font-weight: 600;
-  color: #222;
+  color: #539dc2;
   text-decoration: none;
 }
 a:hover {
@@ -402,3 +413,20 @@ a:hover {
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+
+
+/* PR custom */
+.profile img {
+    display: inline;
+    margin-left: 1em;
+    width: 64px;
+    height: 64px;
+}
+
+.img {
+    text-align: center;
+}
+.img img {
+    display: inline;
+}
