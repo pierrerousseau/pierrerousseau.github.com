@@ -1,21 +1,307 @@
----
-layout: page
-title: Tags
-header: Pages By Tag
-group: navigation
----
-{% include JB/setup %}
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
-</ul>
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+		<title>Pierre's website</title>
 
-{% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-  <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-{% endfor %}
+		<!-- CSS -->
+		<link rel="stylesheet" href="/theme/css/fontawesome-all.css" />
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="/theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.png">
+					Pierre's website
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead">I'm a software engineer. <br />
+I like to write code slowly but with agility and to test new tools. <br />
+This website has been made with the help from <a href="http://getpelican.com/">Pelican</a> and <a href="https://github.com/jvanz/pelican-hyde">Hyde</a>.
+ </p>
+		</div>
+		<nav class="sidebar-nav">
+			<a class="sidebar-nav-item" href="https://stackoverflow.com/users/4596254/pierre">
+				<i class="fab fa-stack-overflow"></i>
+			</a>
+			<a class="sidebar-nav-item" href="https://github.com/pierrerousseau">
+				<i class="fab fa-github"></i>
+			</a>
+			<a class="sidebar-nav-item" href="https://news.ycombinator.com/user?id=proussea">
+				<i class="fab fa-hacker-news"></i>
+			</a>
+			<a class="sidebar-nav-item" href="https://fr.linkedin.com/in/rousseaupierre/en">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-rss"></i>
+			</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<h2>Tags</h2>
+<ol>
+    <li>
+        <a href="/tag/pelican.html">pelican</a> (1)
+        <ul>
+                <li><a href="/first.html">First!</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/vim.html">vim</a> (1)
+        <ul>
+                <li><a href="/vim-tutorial-videos-by-derek-wyatt-2009-2010.html">Vim Tutorial Videos by Derek Wyatt, 2009-2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/brain.html">brain</a> (2)
+        <ul>
+                <li><a href="/your-brain-at-work-by-david-rock-2009.html">Your Brain at Work by David Rock, 2009</a></li>
+                <li><a href="/les-nouvelles-technologies-revolution-culturelle-et-cognitive-par-michel-serres-2007.html">Les nouvelles technologies : révolution culturelle et cognitive par Michel Serres, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/version-control.html">version control</a> (2)
+        <ul>
+                <li><a href="/featurebranch-by-martin-fowler-2009.html">FeatureBranch by Martin Fowler, 2009</a></li>
+                <li><a href="/a-successful-git-branching-model-by-vincent-driessen-2010.html">A Successful Git Branching Model by Vincent Driessen, 2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/video.html">video</a> (6)
+        <ul>
+                <li><a href="/your-brain-at-work-by-david-rock-2009.html">Your Brain at Work by David Rock, 2009</a></li>
+                <li><a href="/the-myth-of-the-genius-programmer-by-brian-fitzpatrick-and-ben-collins-sussman-2009.html">The Myth of the Genius Programmer by Brian Fitzpatrick and Ben Collins-Sussman, 2009</a></li>
+                <li><a href="/programming-style-your-brain-by-douglas-crockford-2011.html">Programming Style & Your Brain by Douglas Crockford, 2011</a></li>
+                <li><a href="/vim-tutorial-videos-by-derek-wyatt-2009-2010.html">Vim Tutorial Videos by Derek Wyatt, 2009-2010</a></li>
+                <li><a href="/internet-libre-ou-minitel-20-par-benjamin-bayart-2007.html">Internet libre, ou Minitel 2.0 ? par Benjamin Bayart, 2007</a></li>
+                <li><a href="/les-nouvelles-technologies-revolution-culturelle-et-cognitive-par-michel-serres-2007.html">Les nouvelles technologies : révolution culturelle et cognitive par Michel Serres, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/learning.html">learning</a> (1)
+        <ul>
+                <li><a href="/how-i-rewired-my-brain-to-become-fluent-in-math-by-barbara-oakley-2014.html">How I Rewired My Brain to Become Fluent in Math by Barbara Oakley, 2014</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/open-standard.html">open standard</a> (1)
+        <ul>
+                <li><a href="/internet-libre-ou-minitel-20-par-benjamin-bayart-2007.html">Internet libre, ou Minitel 2.0 ? par Benjamin Bayart, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/mopidy.html">mopidy</a> (1)
+        <ul>
+                <li><a href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Install Arch Linux and Mopidy on a Raspberry Pi</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/tutorial.html">tutorial</a> (1)
+        <ul>
+                <li><a href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Install Arch Linux and Mopidy on a Raspberry Pi</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/git.html">git</a> (1)
+        <ul>
+                <li><a href="/a-successful-git-branching-model-by-vincent-driessen-2010.html">A Successful Git Branching Model by Vincent Driessen, 2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/myth.html">myth</a> (1)
+        <ul>
+                <li><a href="/the-myth-of-the-genius-programmer-by-brian-fitzpatrick-and-ben-collins-sussman-2009.html">The Myth of the Genius Programmer by Brian Fitzpatrick and Ben Collins-Sussman, 2009</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/inheritance.html">inheritance</a> (1)
+        <ul>
+                <li><a href="/simple-javascript-inheritance-by-john-resig-2008.html">Simple JavaScript Inheritance by John Resig, 2008</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/blog.html">blog</a> (1)
+        <ul>
+                <li><a href="/first.html">First!</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/genius.html">genius</a> (1)
+        <ul>
+                <li><a href="/the-myth-of-the-genius-programmer-by-brian-fitzpatrick-and-ben-collins-sussman-2009.html">The Myth of the Genius Programmer by Brian Fitzpatrick and Ben Collins-Sussman, 2009</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/html.html">html</a> (1)
+        <ul>
+                <li><a href="/how-browsers-work-behind-the-scenes-of-modern-web-browsers-by-tali-garsiel-and-paul-irish-2011.html">How Browsers Work: Behind the scenes of modern web browsers by Tali Garsiel and Paul Irish, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/editor.html">editor</a> (1)
+        <ul>
+                <li><a href="/vim-tutorial-videos-by-derek-wyatt-2009-2010.html">Vim Tutorial Videos by Derek Wyatt, 2009-2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/internet.html">internet</a> (2)
+        <ul>
+                <li><a href="/internet-libre-ou-minitel-20-par-benjamin-bayart-2007.html">Internet libre, ou Minitel 2.0 ? par Benjamin Bayart, 2007</a></li>
+                <li><a href="/les-nouvelles-technologies-revolution-culturelle-et-cognitive-par-michel-serres-2007.html">Les nouvelles technologies : révolution culturelle et cognitive par Michel Serres, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/css.html">css</a> (1)
+        <ul>
+                <li><a href="/how-browsers-work-behind-the-scenes-of-modern-web-browsers-by-tali-garsiel-and-paul-irish-2011.html">How Browsers Work: Behind the scenes of modern web browsers by Tali Garsiel and Paul Irish, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/fr.html">fr</a> (2)
+        <ul>
+                <li><a href="/internet-libre-ou-minitel-20-par-benjamin-bayart-2007.html">Internet libre, ou Minitel 2.0 ? par Benjamin Bayart, 2007</a></li>
+                <li><a href="/les-nouvelles-technologies-revolution-culturelle-et-cognitive-par-michel-serres-2007.html">Les nouvelles technologies : révolution culturelle et cognitive par Michel Serres, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/philosophy.html">philosophy</a> (1)
+        <ul>
+                <li><a href="/les-nouvelles-technologies-revolution-culturelle-et-cognitive-par-michel-serres-2007.html">Les nouvelles technologies : révolution culturelle et cognitive par Michel Serres, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/raspberry-pi.html">raspberry pi</a> (1)
+        <ul>
+                <li><a href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Install Arch Linux and Mopidy on a Raspberry Pi</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/workflow.html">workflow</a> (3)
+        <ul>
+                <li><a href="/featurebranch-by-martin-fowler-2009.html">FeatureBranch by Martin Fowler, 2009</a></li>
+                <li><a href="/a-successful-git-branching-model-by-vincent-driessen-2010.html">A Successful Git Branching Model by Vincent Driessen, 2010</a></li>
+                <li><a href="/the-cost-of-going-it-alone-by-dave-neary-2011.html">The Cost of Going it Alone by Dave Neary, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/javascript.html">javascript</a> (2)
+        <ul>
+                <li><a href="/simple-javascript-inheritance-by-john-resig-2008.html">Simple JavaScript Inheritance by John Resig, 2008</a></li>
+                <li><a href="/programming-style-your-brain-by-douglas-crockford-2011.html">Programming Style & Your Brain by Douglas Crockford, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/slow.html">slow</a> (1)
+        <ul>
+                <li><a href="/the-slow-science-manifesto-by-the-slow-science-academy-2010.html">The Slow Science Manifesto by The Slow Science Academy, 2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/link.html">link</a> (13)
+        <ul>
+                <li><a href="/simple-javascript-inheritance-by-john-resig-2008.html">Simple JavaScript Inheritance by John Resig, 2008</a></li>
+                <li><a href="/how-i-rewired-my-brain-to-become-fluent-in-math-by-barbara-oakley-2014.html">How I Rewired My Brain to Become Fluent in Math by Barbara Oakley, 2014</a></li>
+                <li><a href="/how-browsers-work-behind-the-scenes-of-modern-web-browsers-by-tali-garsiel-and-paul-irish-2011.html">How Browsers Work: Behind the scenes of modern web browsers by Tali Garsiel and Paul Irish, 2011</a></li>
+                <li><a href="/your-brain-at-work-by-david-rock-2009.html">Your Brain at Work by David Rock, 2009</a></li>
+                <li><a href="/featurebranch-by-martin-fowler-2009.html">FeatureBranch by Martin Fowler, 2009</a></li>
+                <li><a href="/the-myth-of-the-genius-programmer-by-brian-fitzpatrick-and-ben-collins-sussman-2009.html">The Myth of the Genius Programmer by Brian Fitzpatrick and Ben Collins-Sussman, 2009</a></li>
+                <li><a href="/a-successful-git-branching-model-by-vincent-driessen-2010.html">A Successful Git Branching Model by Vincent Driessen, 2010</a></li>
+                <li><a href="/the-cost-of-going-it-alone-by-dave-neary-2011.html">The Cost of Going it Alone by Dave Neary, 2011</a></li>
+                <li><a href="/programming-style-your-brain-by-douglas-crockford-2011.html">Programming Style & Your Brain by Douglas Crockford, 2011</a></li>
+                <li><a href="/the-slow-science-manifesto-by-the-slow-science-academy-2010.html">The Slow Science Manifesto by The Slow Science Academy, 2010</a></li>
+                <li><a href="/vim-tutorial-videos-by-derek-wyatt-2009-2010.html">Vim Tutorial Videos by Derek Wyatt, 2009-2010</a></li>
+                <li><a href="/internet-libre-ou-minitel-20-par-benjamin-bayart-2007.html">Internet libre, ou Minitel 2.0 ? par Benjamin Bayart, 2007</a></li>
+                <li><a href="/les-nouvelles-technologies-revolution-culturelle-et-cognitive-par-michel-serres-2007.html">Les nouvelles technologies : révolution culturelle et cognitive par Michel Serres, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/self-improvement.html">self-improvement</a> (3)
+        <ul>
+                <li><a href="/your-brain-at-work-by-david-rock-2009.html">Your Brain at Work by David Rock, 2009</a></li>
+                <li><a href="/the-myth-of-the-genius-programmer-by-brian-fitzpatrick-and-ben-collins-sussman-2009.html">The Myth of the Genius Programmer by Brian Fitzpatrick and Ben Collins-Sussman, 2009</a></li>
+                <li><a href="/programming-style-your-brain-by-douglas-crockford-2011.html">Programming Style & Your Brain by Douglas Crockford, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/article.html">article</a> (6)
+        <ul>
+                <li><a href="/simple-javascript-inheritance-by-john-resig-2008.html">Simple JavaScript Inheritance by John Resig, 2008</a></li>
+                <li><a href="/how-i-rewired-my-brain-to-become-fluent-in-math-by-barbara-oakley-2014.html">How I Rewired My Brain to Become Fluent in Math by Barbara Oakley, 2014</a></li>
+                <li><a href="/how-browsers-work-behind-the-scenes-of-modern-web-browsers-by-tali-garsiel-and-paul-irish-2011.html">How Browsers Work: Behind the scenes of modern web browsers by Tali Garsiel and Paul Irish, 2011</a></li>
+                <li><a href="/featurebranch-by-martin-fowler-2009.html">FeatureBranch by Martin Fowler, 2009</a></li>
+                <li><a href="/a-successful-git-branching-model-by-vincent-driessen-2010.html">A Successful Git Branching Model by Vincent Driessen, 2010</a></li>
+                <li><a href="/the-cost-of-going-it-alone-by-dave-neary-2011.html">The Cost of Going it Alone by Dave Neary, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/closure.html">closure</a> (1)
+        <ul>
+                <li><a href="/simple-javascript-inheritance-by-john-resig-2008.html">Simple JavaScript Inheritance by John Resig, 2008</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/continuous-integration.html">continuous integration</a> (1)
+        <ul>
+                <li><a href="/featurebranch-by-martin-fowler-2009.html">FeatureBranch by Martin Fowler, 2009</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/science.html">science</a> (1)
+        <ul>
+                <li><a href="/the-slow-science-manifesto-by-the-slow-science-academy-2010.html">The Slow Science Manifesto by The Slow Science Academy, 2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/programming.html">programming</a> (2)
+        <ul>
+                <li><a href="/the-myth-of-the-genius-programmer-by-brian-fitzpatrick-and-ben-collins-sussman-2009.html">The Myth of the Genius Programmer by Brian Fitzpatrick and Ben Collins-Sussman, 2009</a></li>
+                <li><a href="/programming-style-your-brain-by-douglas-crockford-2011.html">Programming Style & Your Brain by Douglas Crockford, 2011</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/arch-linux.html">arch-linux</a> (1)
+        <ul>
+                <li><a href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Install Arch Linux and Mopidy on a Raspberry Pi</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/manifesto.html">manifesto</a> (1)
+        <ul>
+                <li><a href="/the-slow-science-manifesto-by-the-slow-science-academy-2010.html">The Slow Science Manifesto by The Slow Science Academy, 2010</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/free-software.html">free software</a> (2)
+        <ul>
+                <li><a href="/the-cost-of-going-it-alone-by-dave-neary-2011.html">The Cost of Going it Alone by Dave Neary, 2011</a></li>
+                <li><a href="/internet-libre-ou-minitel-20-par-benjamin-bayart-2007.html">Internet libre, ou Minitel 2.0 ? par Benjamin Bayart, 2007</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="/tag/browser.html">browser</a> (1)
+        <ul>
+                <li><a href="/how-browsers-work-behind-the-scenes-of-modern-web-browsers-by-tali-garsiel-and-paul-irish-2011.html">How Browsers Work: Behind the scenes of modern web browsers by Tali Garsiel and Paul Irish, 2011</a></li>
+        </ul>
+    </li>
+</ol>
+		</div>
+	</body>
+</html>

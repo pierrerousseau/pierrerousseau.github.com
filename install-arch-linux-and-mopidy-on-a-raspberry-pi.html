@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Pierre's website</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/theme/css/fontawesome-all.css" />
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="/theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.png">
+					Pierre's website
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead">I'm a software engineer. <br />
+I like to write code slowly but with agility and to test new tools. <br />
+This website has been made with the help from <a href="http://getpelican.com/">Pelican</a> and <a href="https://github.com/jvanz/pelican-hyde">Hyde</a>.
+ </p>
+		</div>
+		<nav class="sidebar-nav">
+			<a class="sidebar-nav-item" href="https://stackoverflow.com/users/4596254/pierre">
+				<i class="fab fa-stack-overflow"></i>
+			</a>
+			<a class="sidebar-nav-item" href="https://github.com/pierrerousseau">
+				<i class="fab fa-github"></i>
+			</a>
+			<a class="sidebar-nav-item" href="https://news.ycombinator.com/user?id=proussea">
+				<i class="fab fa-hacker-news"></i>
+			</a>
+			<a class="sidebar-nav-item" href="https://fr.linkedin.com/in/rousseaupierre/en">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-rss"></i>
+			</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">Install Arch Linux and Mopidy on a Raspberry Pi</h1>
+	<div class="post-tags">
+		<h5><a href="/tag/tutorial.html">tutorial</a></h5>
+		<h5><a href="/tag/arch-linux.html">arch-linux</a></h5>
+		<h5><a href="/tag/mopidy.html">mopidy</a></h5>
+		<h5><a href="/tag/raspberry-pi.html">raspberry pi</a></h5>
+	</div>
+	<span class="post-date">sam. 22 novembre 2014</span>
+	<h2>What ?</h2>
+<p>I describe here how I did install <a href="https://www.mopidy.com/">Mopidy</a> under <a href="https://archlinuxarm.org/">Arch Linux</a> on a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>. To do that, I did use :</p>
+<ul>
+<li>a <a href="https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus/">Raspberry Pi model B+</a></li>
+<li>a power Adaptator from Aukru (AP12003UV)</li>
+<li>speakers that you can plug on a 3.5mm jack</li>
+<li>a microSD card (32Gb)</li>
+</ul>
+<p><img alt="My Raspberry Pi" src="images/raspberry_pi.jpg"></p>
+<h2>Why ?</h2>
+<p>I read an <a href="http://linuxfr.org/users/kursus_hc/journaux/une-installation-hi-fi-de-qualitay-avec-le-raspberry-pi-arch-pulseaudio-shairport-trolls-inside">article on linuxfr</a>, got time and no wish to travel. So I decided to buy a Raspberry Pi and to install a <a href="http://en.wikipedia.org/wiki/Music_Player_Daemon">MPD</a> with a web frontend on it.</p>
+<p>I randomly choose <a href="https://www.mopidy.com/">Mopidy</a>, probably because it was the first one I found written in Python.</p>
+<p>I could just install <a href="http://www.pimusicbox.com/">Pi MusicBox</a>, but I didn’t want a system dedicated to this only use. The article on linuxfr is based on <a href="http://archlinuxarm.org/">Arch Linux</a> and I never installed it on any of my computer, so it was a good opportunity to change that.</p>
+<p>I took a Raspberry Pi model B+ because it was cheap and new and a bit better than other models. A Raspberry Pi does not come with its power adaptator, you have find one separatly and the one from Aukru seems to be quite popular among the Raspberry Pi community. You also have to buy a SD card, I took a 32Gb microSD card to not feel under constraint.</p>
+<h2>How ?</h2>
+<p>First we plug the microSD card into our computer running under GNU/Linux, then follow the instructions for the <a href="http://archlinuxarm.org/">Arch Linux website</a>. For me it was :</p>
+<div class="highlight"><pre><span></span>$ umount /dev/sdd1
+$ fdisk /dev/sdd
+</pre></div>
+
+
+<p>Type p to list partitions.</p>
+<div class="highlight"><pre><span></span>Disk /dev/sdd: 31.9 GB, 31914983424 bytes
+</pre></div>
+
+
+<p>Type o. This will clear out any partitions on the drive.</p>
+<p>Type p to list partitions. There should be no partitions left.</p>
+<p>Type n, then p for primary, 1 for the first partition on the drive, press ENTER to accept the default first sector, then type +100M for the last sector.</p>
+<p>Type t, then c to set the first partition to type W95 FAT32 (LBA).</p>
+<p>Type n, then p for primary, 2 for the second partition on the drive, and then press ENTER twice to accept the default first and last sector.</p>
+<p>Write the partition table and exit by typing w</p>
+<div class="highlight"><pre><span></span>$ mkfs.vfat /dev/sdd1
+$ mkdir boot
+$ mount /dev/sdd1 boot
+
+$ mkfs.ext4 /dev/sdd2
+$ mkdir root
+$ mount /dev/sdd2 root
+
+$ wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-latest.tar.gz
+$ bsdtar -xpf ArchLinuxARM-rpi-latest.tar.gz -C root
+$ sync
+
+$ mv root/boot/* boot
+
+$ umount boot root
+</pre></div>
+
+
+<p>Then we remove the microSD card from the computer and put it into the Raspberry Pi, connect the Raspberry Pi on the network using the Ethernet port and then plug the power Adaptator. Then we log on the Raspberry Pi with ssh (to know the IP adress of your Raspberry Pi depends on how your network is set up, so I can’t really help you for that) :</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">slogin</span> <span class="n">root</span><span class="mf">@192.168.0.15</span>
+<span class="n">root</span><span class="mf">@192.168.0.15</span><span class="err">&#39;</span><span class="n">s</span> <span class="nl">password</span><span class="p">:</span> 
+</pre></div>
+
+
+<p>The default password for root is root. And you should change it as soon as possible.</p>
+<p>Then we update the system and create a new user.</p>
+<div class="highlight"><pre><span></span>$ pacman -Suy
+$ pacman -S adduser
+$ adduser mopidy 
+</pre></div>
+
+
+<p>adduser is a tool to easily add a new user. We just press ENTER to all the questions except the one about additional groups, here we choose audio.</p>
+<p>We will then use <a href="https://wiki.archlinux.org/index.php/yaourt">yaourt</a>, a wrapper for pacman, the Arch Linux package manager.</p>
+<div class="highlight"><pre><span></span>$ pacman -S yaourt
+error: target not found: yaourt
+</pre></div>
+
+
+<p>Erm. I do not remember where I found the solution but here is how to install yaourt on Arch Linux :</p>
+<div class="highlight"><pre><span></span>$ pacman -S base-devel
+$ pacman -S yajl
+
+$ su mopidy
+$ <span class="nb">cd</span>
+$ mkdir install
+$ <span class="nb">cd</span> install
+$ curl -O https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+$ tar xf package-query.tar.gz
+$ <span class="nb">cd</span> package-query
+$ makepkg -Acs
+$ su
+$ pacman -U package-query-1.4-1-armv6h.pkg.tar.xz 
+$ <span class="nb">exit</span>
+
+$ <span class="nb">cd</span> ..
+$ curl -O https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
+$ tar xf yaourt.tar.gz
+$ <span class="nb">cd</span> yaourt
+$ makepkg -Acs
+$ su
+$ pacman -U yaourt-1.5-1-any.pkg.tar.xz 
+$ <span class="nb">exit</span>
+$ <span class="nb">cd</span> ..
+</pre></div>
+
+
+<p>Now we can install Mopidy easily, and launch it to be sure it is working.</p>
+<div class="highlight"><pre><span></span>$ yaourt -S mopidy
+$ yaourt -S mopidy-musicbox
+
+$ mopidy
+Ctrl-C
+</pre></div>
+
+
+<p>Ctrl-C will shut down the Mopidy server and mopidy-musicbox is one of the many web frontend available for Mopidy (the one from Pi MusicBox). yaourt will ask for root password, according to the documentation, it is only to launch pacman.</p>
+<p>Then we have to make directories and set up the Mopidy configuration. For a start we do it as simple as possible.</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span>
+$ mkdir media
+$ mkdir data
+$ mkdir playlists
+$ vi .config/mopidy/mopidy.conf 
+</pre></div>
+
+
+<p>I paste here the change i made in the configuration file :</p>
+<div class="highlight"><pre><span></span><span class="k">[local]</span>
+<span class="na">media_dir</span> <span class="o">=</span> <span class="s">/home/mopidy/media</span>
+<span class="na">data_dir</span> <span class="o">=</span> <span class="s">/home/mopidy/data</span>
+<span class="na">playlists_dir</span> <span class="o">=</span> <span class="s">/home/mopidy/playlists</span>
+
+<span class="k">[mpd]</span>
+<span class="na">hostname</span> <span class="o">=</span> <span class="s">0.0.0.0</span>
+
+<span class="k">[http]</span>
+<span class="na">hostname</span> <span class="o">=</span> <span class="s">0.0.0.0</span>
+</pre></div>
+
+
+<p>Then we will set it up as a service for systemd with the <a href="https://github.com/mopidy/mopidy/issues/266#issuecomment-19273353">help of dz0ny</a>.</p>
+<div class="highlight"><pre><span></span>$ su
+$ vi /etc/systemd/system/mopidy.service
+</pre></div>
+
+
+<p>Here is the file :</p>
+<div class="highlight"><pre><span></span><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Mopidy</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">User</span><span class="o">=</span><span class="s">pi</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/mopidy --config=/home/mopidy/.config/mopidy/mopidy.conf</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">on-abort</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</pre></div>
+
+
+<p>And Finally</p>
+<div class="highlight"><pre><span></span>$ systemctl <span class="nb">enable</span> /etc/systemd/system/mopidy.service
+$ reboot
+</pre></div>
+
+
+<p>Now we can connect on our server with our favourite browser. For me it was : http://192.168.0.15:6680/
+Want more ?</p>
+<p>Ok, a few other things I’ve done and that may help you also :</p>
+<ul>
+<li>Following the article on linuxfr i bought a USB <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">DAC</a> (<a href="http://hifimediy.com/U2-DAC">this one from HiFimeDIY</a> based on one comment of this article).</li>
+</ul>
+<p>To make it work we have to comment the Raspberry Pi audio module.</p>
+<div class="highlight"><pre><span></span>$ vi /etc/modules-load.d/raspberrypi.conf
+</pre></div>
+
+
+<p>And change this :</p>
+<div class="highlight"><pre><span></span>#snd-bcm2835
+</pre></div>
+
+
+<p>Then force its index into the alsa configuration file.</p>
+<div class="highlight"><pre><span></span>$ vi /etc/modprobe.d/alsa-base.conf
+</pre></div>
+
+
+<p>And add this (the file was created by the previous command) :</p>
+<div class="highlight"><pre><span></span>options snd-usb-audio index=0
+</pre></div>
+
+
+<ul>
+<li>
+<p>I also bought a box for the Raspberry Pi, the B+ Ninja Pibow. Because it looks cool (see image at top of this article).</p>
+</li>
+<li>
+<p>To change the default radio stations list of the MusciBox webserver you have to manually edit a file, restart the Mopidy server, remove the cookies for the site and reload the page.</p>
+</li>
+</ul>
+<p>Here is the file to change (there is probably a better way) :</p>
+<div class="highlight"><pre><span></span>$ vi /usr/lib/python2.7/site-packages/mopidy_musicbox_webclient/static/js/radiostations.js
+</pre></div>
+
+
+<p>That’s all for now (even if I will probably correct or update this post later :)</p>
+</div>
+		</div>
+	</body>
+</html>
