@@ -1,0 +1,4 @@
+pelican
+markdown
+Fabric==1.13.1
+ghp-import

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Tags</h2>
+<ol>
+{% for tag, articles in tags %}
+    <li>
+        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{articles|length}})
+        <ul>
+            {% for article in articles %}
+                <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+</ol>
+{% endblock %}
