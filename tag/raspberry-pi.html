@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+			<meta name="description" content="I'm a software engineer.<br />I like to write code slowly but with agility and to test new tools. <br />This website was crafted with the assistance of <a href='http://getpelican.com/'>Pelican</a> and <a href='https://github.com/jvanz/pelican-hyde'>Hyde</a>." />
+			<meta property="og:description" content="I'm a software engineer.<br />I like to write code slowly but with agility and to test new tools. <br />This website was crafted with the assistance of <a href='http://getpelican.com/'>Pelican</a> and <a href='https://github.com/jvanz/pelican-hyde'>Hyde</a>." />
+			<meta property="og:title" content="Pierre's website" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="" />
+		<meta property="og:image" content="/images/avatar.png" />
 
 		<!-- Enable responsiveness on mobile devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-		<title>Pierre's website</title>
+		<title>Pierre's website - raspberry pi tag</title>
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="/theme/css/fontawesome-all.css" />
 		<link rel="stylesheet" href="/theme/css/poole.css" />
 		<link rel="stylesheet" href="/theme/css/hyde.css" />
 		<link rel="stylesheet" href="/theme/css/syntax.css" />
-		<link rel="stylesheet" href="/theme/css/style.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
 
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+		<!-- Feeds -->
+
+		<!-- Analytics -->
 	</head>
 
 	<body class="theme-base-0d">
@@ -32,34 +41,67 @@
 				</a>
 			</h1>
 			<p class="lead"></p>
-			<p class="lead">I'm a software engineer. <br />
-I like to write code slowly but with agility and to test new tools. <br />
-This website has been made with the help from <a href="http://getpelican.com/">Pelican</a> and <a href="https://github.com/jvanz/pelican-hyde">Hyde</a>.
- </p>
+			<p class="lead">I'm a software engineer.<br />I like to write code slowly but with agility and to test new tools. <br />This website was crafted with the assistance of <a href='http://getpelican.com/'>Pelican</a> and <a href='https://github.com/jvanz/pelican-hyde'>Hyde</a>. </p>
+			<p></p>
 		</div>
-		<nav class="sidebar-nav">
-			<a class="sidebar-nav-item" href="https://stackoverflow.com/users/4596254/pierre">
-				<i class="fab fa-stack-overflow"></i>
-			</a>
-			<a class="sidebar-nav-item" href="https://github.com/pierrerousseau">
-				<i class="fab fa-github"></i>
-			</a>
-			<a class="sidebar-nav-item" href="https://news.ycombinator.com/user?id=proussea">
-				<i class="fab fa-hacker-news"></i>
-			</a>
-			<a class="sidebar-nav-item" href="https://fr.linkedin.com/in/rousseaupierre/en">
-				<i class="fab fa-linkedin"></i>
-			</a>
-			<a class="sidebar-nav-item" href="">
+			<ul class="sidebar-nav">
+			</ul>
+		<nav class="sidebar-social">
+					<a class="sidebar-social-item" href="https://stackoverflow.com/users/4596254/pierre/" target="_blank">
+						<i class="fa fa-stack-overflow"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://github.com/pierrerousseau/" target="_blank">
+						<i class="fa fa-github"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://news.ycombinator.com/user?id=proussea" target="_blank">
+						<i class="fa fa-hacker-news"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://fr.linkedin.com/in/rousseaupierre/en" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+			<a class="sidebar-social-item" href="/">
 				<i class="fa fa-rss"></i>
 			</a>
 		</nav>
 	</div>
 </div>		<div class="content container">
-    <h2>Tag: raspberry pi</h2>
-    <ul>
-            <li><a href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Install Arch Linux and Mopidy on a Raspberry Pi</a></li>
-    </ul>
+	<div class="posts">
+			<div class="post">
+				<h1 class="post-title" href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">
+					<a href="/install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Install Arch Linux and Mopidy on a Raspberry Pi</a>
+				</h1>
+				<span class="post-date">sam. 22 novembre 2014</span>
+					<span class="post-tags">
+						Tags:
+						<ul>
+								<li><a href="/tag/tutorial.html">tutorial</a></li>
+								<li><a href="/tag/arch-linux.html">arch-linux</a></li>
+								<li><a href="/tag/mopidy.html">mopidy</a></li>
+								<li><a href="/tag/raspberry-pi.html">raspberry pi</a></li>
+						</ul>
+					</span>
+				<p>
+					<h2>What ?</h2>
+<p>I describe here how I did install <a href="https://www.mopidy.com/">Mopidy</a> under <a href="https://archlinuxarm.org/">Arch Linux</a> on a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>. To do that, I did use :</p>
+<ul>
+<li>a <a href="https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus/">Raspberry Pi model B+</a></li>
+<li>a power Adaptator from Aukru (AP12003UV)</li>
+<li>speakers that you can plug on a 3.5mm jack</li>
+<li>a microSD card (32Gb)</li>
+</ul>
+<p><img alt="My Raspberry Pi" src="images/raspberry_pi.jpg"></p>
+<h2>Why ?</h2>
+<p>I read …</p>
+				</p>
+				<a class="read-more" href="install-arch-linux-and-mopidy-on-a-raspberry-pi.html">Continue reading »</a>
+			</div>
+	</div>
+	<div class="pagination">
+
+		<span class="pagination-item older">Newer</span>
+
+		<span class="pagination-item newer">Older</span>
+	</div>
 		</div>
 	</body>
 </html>

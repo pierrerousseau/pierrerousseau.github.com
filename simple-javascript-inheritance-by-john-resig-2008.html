@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="I'm a software engineer.<br />I like to write code slowly but with agility and to test new tools. <br />This website was crafted with the assistance of <a href='http://getpelican.com/'>Pelican</a> and <a href='https://github.com/jvanz/pelican-hyde'>Hyde</a>.">
+	<meta property="og:description" content="I'm a software engineer.<br />I like to write code slowly but with agility and to test new tools. <br />This website was crafted with the assistance of <a href='http://getpelican.com/'>Pelican</a> and <a href='https://github.com/jvanz/pelican-hyde'>Hyde</a>.">
+	<meta property="og:title" content="Simple JavaScript Inheritance by John Resig, 2008" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="/simple-javascript-inheritance-by-john-resig-2008.html" />
+		<meta property="og:image" content="/images/avatar.png" />
 
 		<!-- Enable responsiveness on mobile devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -10,14 +19,14 @@
 		<title>Pierre's website</title>
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="/theme/css/fontawesome-all.css" />
 		<link rel="stylesheet" href="/theme/css/poole.css" />
 		<link rel="stylesheet" href="/theme/css/hyde.css" />
 		<link rel="stylesheet" href="/theme/css/syntax.css" />
-		<link rel="stylesheet" href="/theme/css/style.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
 
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+		<!-- Feeds -->
+
+		<!-- Analytics -->
 	</head>
 
 	<body class="theme-base-0d">
@@ -32,25 +41,25 @@
 				</a>
 			</h1>
 			<p class="lead"></p>
-			<p class="lead">I'm a software engineer. <br />
-I like to write code slowly but with agility and to test new tools. <br />
-This website has been made with the help from <a href="http://getpelican.com/">Pelican</a> and <a href="https://github.com/jvanz/pelican-hyde">Hyde</a>.
- </p>
+			<p class="lead">I'm a software engineer.<br />I like to write code slowly but with agility and to test new tools. <br />This website was crafted with the assistance of <a href='http://getpelican.com/'>Pelican</a> and <a href='https://github.com/jvanz/pelican-hyde'>Hyde</a>. </p>
+			<p></p>
 		</div>
-		<nav class="sidebar-nav">
-			<a class="sidebar-nav-item" href="https://stackoverflow.com/users/4596254/pierre">
-				<i class="fab fa-stack-overflow"></i>
-			</a>
-			<a class="sidebar-nav-item" href="https://github.com/pierrerousseau">
-				<i class="fab fa-github"></i>
-			</a>
-			<a class="sidebar-nav-item" href="https://news.ycombinator.com/user?id=proussea">
-				<i class="fab fa-hacker-news"></i>
-			</a>
-			<a class="sidebar-nav-item" href="https://fr.linkedin.com/in/rousseaupierre/en">
-				<i class="fab fa-linkedin"></i>
-			</a>
-			<a class="sidebar-nav-item" href="">
+			<ul class="sidebar-nav">
+			</ul>
+		<nav class="sidebar-social">
+					<a class="sidebar-social-item" href="https://stackoverflow.com/users/4596254/pierre/" target="_blank">
+						<i class="fa fa-stack-overflow"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://github.com/pierrerousseau/" target="_blank">
+						<i class="fa fa-github"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://news.ycombinator.com/user?id=proussea" target="_blank">
+						<i class="fa fa-hacker-news"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://fr.linkedin.com/in/rousseaupierre/en" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+			<a class="sidebar-social-item" href="/">
 				<i class="fa fa-rss"></i>
 			</a>
 		</nav>
@@ -58,13 +67,6 @@ This website has been made with the help from <a href="http://getpelican.com/">P
 </div>		<div class="content container">
 <div class="post">
 	<h1 class="post-title">Simple JavaScript Inheritance by John Resig, 2008</h1>
-	<div class="post-tags">
-		<h5><a href="/tag/link.html">link</a></h5>
-		<h5><a href="/tag/article.html">article</a></h5>
-		<h5><a href="/tag/javascript.html">javascript</a></h5>
-		<h5><a href="/tag/closure.html">closure</a></h5>
-		<h5><a href="/tag/inheritance.html">inheritance</a></h5>
-	</div>
 	<span class="post-date">lun. 15 décembre 2014</span>
 	<h2>Links</h2>
 <p><a href="http://ejohn.org/blog/simple-javascript-inheritance/">Simple JavaScript Inheritance</a> by <a href="http://ejohn.org/">John Resig</a>, 2008.</p>
@@ -73,6 +75,17 @@ This website has been made with the help from <a href="http://getpelican.com/">P
 <p>I wanted to go about extracting the soul of these techniques into a simple, re-usable, form that could be easily understood and didn’t have any dependencies. Additionally I wanted the result to be simple and highly usable.</p>
 <h2>Personnal opinion</h2>
 <p>In this article John Resig gives and comments a source code implementing inheritance in JavaScript. It would have been interesting to have his view on other inheritance technics and to know why he has chosen to present this one. However the code is simple and well explained. In addition to the main subject, I think the implementation of super is one of the most brilliant example of closure I ever seen : it’s simple and powerful, understand it, and you’ll understand closures.</p>
+
+		<span class="post-tags">
+			<ul>
+					<li><a href="/tag/link.html">link</a></li>
+					<li><a href="/tag/article.html">article</a></li>
+					<li><a href="/tag/javascript.html">javascript</a></li>
+					<li><a href="/tag/closure.html">closure</a></li>
+					<li><a href="/tag/inheritance.html">inheritance</a></li>
+			</ul>
+		</span>
+
 </div>
 		</div>
 	</body>
